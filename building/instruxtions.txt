@@ -1,0 +1,4 @@
+sudo apt install qt5-qmake qt5-default qtmultimedia5-dev libqt5charts5-dev libqt5multimediawidgets5 libqt5multimedia5-plugins libqt5multimedia5
+
+(qt plugin versions have to match qt versions: if you accidentally updated your system's qmake, run the above line)
+build from root
