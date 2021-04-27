@@ -81,7 +81,7 @@ void ProtocolWidget::update()
 
         for (int i = 0; i < stepsBack + stepsForward; i++) {
             ProtocolStep* step;
-            QColor bg = Qt::black;
+            QColor bg = Qt::white;
             QFont f = undoFont;
             if (i < stepsBack) {
                 step = file->protocol()->undoStep(i);

@@ -61,7 +61,7 @@ ChannelListItem::ChannelListItem(int ch, ChannelListWidget* parent)
     QToolBar* toolBar = new QToolBar(this);
     toolBar->setIconSize(QSize(12, 12));
     QPalette palette = toolBar->palette();
-    palette.setColor(QPalette::Background, Qt::white);
+    palette.setColor(QPalette::Background, Qt::darkGray);
     toolBar->setPalette(palette);
 
     // visibility
@@ -152,7 +152,7 @@ void ChannelListItem::onBeforeUpdate()
     instrumentLabel->setText(text);
 
     if (channelList->midiFile()->channel(channel)->eventMap()->isEmpty()) {
-        colored->setColor(Qt::lightGray);
+        colored->setColor(Qt::darkGray);
     } else {
         colored->setColor(*(Appearance::channelColor(channel)));
     }

@@ -44,7 +44,7 @@ TempoDialog::TempoDialog(MidiFile *file, int startTick, int endTick,  QWidget *p
                                  "</body>"
                                  "</html>");
     layout->addWidget(tip, 2, 1, 1, 2);
-    tip->setStyleSheet("color: black; background-color: white; padding: 5px");
+    tip->setStyleSheet("color: #999; background-color: #333; padding: 5px");
 
     // identify tempo at start tick
     QMap<int, MidiEvent*> *events = file->tempoEvents();

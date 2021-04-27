@@ -99,13 +99,13 @@ void MiscWidget::paintEvent(QPaintEvent* event)
     QFont f = painter.font();
     f.setPixelSize(9);
     painter.setFont(f);
-    QColor c(234, 246, 255);
+    QColor c(0, 0, 0);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(Qt::gray);
+    painter.setPen(Qt::lightGray);
     painter.setBrush(c);
     painter.drawRect(0, 0, width() - 1, height() - 1);
 
-    painter.setPen(QColor(194, 230, 255));
+    painter.setPen(QColor(20, 20, 20));
     for (int i = 0; i < 8; i++) {
         painter.drawLine(0, (i * height()) / 8, width(), (i * height()) / 8);
     }

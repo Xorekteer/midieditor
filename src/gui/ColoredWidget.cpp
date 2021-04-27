@@ -25,7 +25,7 @@ void ColoredWidget::paintEvent(QPaintEvent* event)
 
     p.begin(this);
     p.setRenderHint(QPainter::Antialiasing);
-    p.fillRect(0, 0, width(), height(), Qt::white);
+    p.fillRect(0, 0, width(), height(), Qt::darkGray);
     p.setPen(Qt::lightGray);
     p.setBrush(_color);
     p.drawRoundRect(x, y, l, l, 30, 30);

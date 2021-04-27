@@ -41,7 +41,7 @@ QString SettingsWidget::title()
 QWidget* SettingsWidget::createInfoBox(QString info)
 {
     QLabel* label = new QLabel(info, this);
-    label->setStyleSheet("color: gray; background-color: white; padding: 5px");
+    label->setStyleSheet("color: #999; background-color: #111; padding: 5px");
     label->setWordWrap(true);
     label->setAlignment(Qt::AlignJustify);
     label->setOpenExternalLinks(true);

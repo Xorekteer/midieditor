@@ -83,7 +83,7 @@ AutomaticUpdateDialog::AutomaticUpdateDialog(
   a->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
   a->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
   layout->addWidget(a, 0, 1, 4, 2);
-  content->setStyleSheet("color: black; background-color: white; padding: 5px");
+  content->setStyleSheet("color: #999; background-color: #111; padding: 5px");
 
   content->setTextInteractionFlags(Qt::LinksAccessibleByMouse);
   content->setOpenExternalLinks(true);

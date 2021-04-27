@@ -227,22 +227,22 @@ void MatrixWidget::paintEvent(QPaintEvent* event)
         }
         if (pianoKeys > 0) {
             pixpainter->fillRect(0, timeHeight, lineNameWidth - 10,
-                pianoKeys * lineHeight(), Qt::white);
+                pianoKeys * lineHeight(), Qt::darkGray);
         }
 
 
         // draw lines, pianokeys and linenames
         for (int i = startLineY; i <= endLineY; i++) {
             int startLine = yPosOfLine(i);
-            QColor c(194, 230, 255);
+            QColor c(25, 25, 25);
             if ( !( (1 << (i % 12)) & sharp_strip_mask ) ){
-                c = QColor(234, 246, 255);
+                c = QColor(45, 45, 45);
             }
 
             if (i > 127) {
-                c = QColor(194, 194, 194);
+                c = QColor(70, 70, 70);
                 if (i % 2 == 1) {
-                    c = QColor(234, 246, 255);
+                    c = QColor(55, 55, 55);
                 }
             }
             pixpainter->fillRect(lineNameWidth, startLine, width(),
@@ -257,7 +257,7 @@ void MatrixWidget::paintEvent(QPaintEvent* event)
             height());
 
         pixpainter->setPen(Qt::darkGray);
-        pixpainter->setBrush(Qt::white);
+        pixpainter->setBrush(Qt::darkRed);
         pixpainter->drawRect(lineNameWidth, 2, width() - lineNameWidth - 1, timeHeight - 2);
         pixpainter->setPen(Qt::black);
 
@@ -341,7 +341,7 @@ void MatrixWidget::paintEvent(QPaintEvent* event)
                 }
             }
             int xto = xPosOfMs(msOfTick(tick));
-            pixpainter->setBrush(Qt::lightGray);
+            pixpainter->setBrush(Qt::darkGray);
             pixpainter->setPen(Qt::NoPen);
             pixpainter->drawRoundedRect(xfrom + 2, timeHeight / 2 + 4, xto - xfrom - 4, timeHeight / 2 - 10, 5, 5);
             if (tick > startTick) {
@@ -354,7 +354,7 @@ void MatrixWidget::paintEvent(QPaintEvent* event)
                     textlength = QFontMetrics(pixpainter->font()).width(text);
                 }
                 int pos = (xfrom + xto) / 2;
-                pixpainter->setPen(Qt::white);
+                pixpainter->setPen(Qt::darkRed);
                 pixpainter->drawText(pos - textlength / 2, timeHeight - 9, text);
 
                 if (_div >= 0) {
@@ -495,7 +495,7 @@ void MatrixWidget::paintEvent(QPaintEvent* event)
             QPointF(x, timeHeight - 2),
         };
 
-        painter->setBrush(QBrush(QColor(194, 230, 255), Qt::SolidPattern));
+        painter->setBrush(QBrush(QColor(90, 90, 90), Qt::SolidPattern));
 
         painter->drawPolygon(points, 3);
         painter->setPen(Qt::gray);
@@ -787,7 +787,7 @@ void MatrixWidget::paintPianoKey(QPainter* painter, int number, int x, int y,
             } else if (selected) {
                 painter->setBrush(Qt::lightGray);
             } else {
-                painter->setBrush(Qt::white);
+                painter->setBrush(Qt::darkRed);
             }
         }
         painter->setPen(Qt::darkGray);
